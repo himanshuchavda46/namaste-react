@@ -1,3 +1,6 @@
+import React from 'react'; // refer to node modules react
+import ReactDOM from 'react-dom/client';
+
 const heading = React.createElement(
     "h1", // type of tag
     {id: "heading",xyz: "abc"}, // attributes
