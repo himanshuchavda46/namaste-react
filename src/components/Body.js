@@ -1,12 +1,13 @@
 import React, {useState,useEffect} from "react";
 import RestaurantCard from "./RestaurantCard";
 import ShimmerSkeleton from "./ShimmerSkeleton";
-
+import useOnline from "../utils/useOnline"
 import {resData} from "../utils/mockData"
 
 const Body = () => {
     const [listOfRestaurants,setListOfRestaurats] = useState([]);
     const [isLoading,setIsLoading] = useState(false);
+    const isOnline = useOnline();
 
     useEffect(() => {
        fetchRestaurants();
@@ -19,6 +20,7 @@ const Body = () => {
         setListOfRestaurats(jsonData?.data?.cards?.[2]?.data?.data?.cards);
         setIsLoading(false);
     }
+    if(!isOnline) return "You are offline";
     if(listOfRestaurants.length === 0 && !isLoading) return "No Data";
     return isLoading ? <ShimmerSkeleton/> : (
         <div className="body">
