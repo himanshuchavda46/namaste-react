@@ -25,7 +25,7 @@ const Body = () => {
     return isLoading ? <ShimmerSkeleton/> : (
         <div className="body">
             <div className="filterContainer">
-                <button className="filter-btn" onClick={() => {
+                <button className="filter-btn p-2 m-2 bg-black text-white" onClick={() => {
                     const filterList = listOfRestaurants.filter((res)=> res.data.avgRating > 4);
                     setListOfRestaurats(filterList);
                 }}>Top Rated Restaurants</button>

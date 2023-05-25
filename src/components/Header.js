@@ -4,7 +4,7 @@ import foodvilla from "../assets/img/foodvilla.png"
 import {Link} from "react-router-dom"
 const Header = () => {
     const [isLoggedIn,setIsLoggedIn] = useState(false);
-    
+
     return (
         <div className="header">
             <div className="logContainer">
@@ -29,9 +29,8 @@ const Header = () => {
                            Contact us
                         </Link>
                     </li>
-                    <li>Cart</li>
                     {
-                        isLoggedIn ? <button onClick={()=>setIsLoggedIn(false)}> Logout </button> : <button onClick={()=>setIsLoggedIn(true)}>Login</button>
+                        isLoggedIn ? <button onClick={()=>setIsLoggedIn(false)} className="p-2 bg-black text-white"> Logout </button> : <button onClick={()=>setIsLoggedIn(true)} className="p-2 bg-black text-white">Login</button>
                     }
                 </ul>
 
