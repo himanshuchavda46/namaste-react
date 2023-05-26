@@ -1,13 +1,15 @@
-import React, {useState,useEffect} from "react";
+import React, {useState,useEffect,useContext} from "react";
 import RestaurantCard from "./RestaurantCard";
 import ShimmerSkeleton from "./ShimmerSkeleton";
 import useOnline from "../utils/useOnline"
 import {resData} from "../utils/mockData"
+import UserContext from "../utils/UserContext"
 
 const Body = () => {
     const [listOfRestaurants,setListOfRestaurats] = useState([]);
     const [isLoading,setIsLoading] = useState(false);
     const isOnline = useOnline();
+    const {user,setUser} = useContext(UserContext);
 
     useEffect(() => {
        fetchRestaurants();
@@ -24,6 +26,14 @@ const Body = () => {
     if(listOfRestaurants.length === 0 && !isLoading) return "No Data";
     return isLoading ? <ShimmerSkeleton/> : (
         <div className="body">
+            <input className="p-1 m-1 border border-black"
+                    placeholder="user name"
+                   value={user.name}
+                   onChange={(e)=>setUser({
+                ...user,
+                name: e.target.value
+            })} />
+            <h1 className="font-bold p-1 m-1 text-xl">Hello {user.name}</h1>
             <div className="filterContainer">
                 <button className="filter-btn p-2 m-2 bg-black text-white" onClick={() => {
                     const filterList = listOfRestaurants.filter((res)=> res.data.avgRating > 4);
