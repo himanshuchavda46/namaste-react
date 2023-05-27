@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="49e40e4d-2894-4c18-b91b-ff15446fc8f8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Body.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProfileClass.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileClass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RestaurantCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RestaurantCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RestaurantMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RestaurantMenu.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +74,7 @@
       <workItem from="1681211780159" duration="2176000" />
       <workItem from="1681216154989" duration="13000" />
       <workItem from="1681216373975" duration="4922000" />
-      <workItem from="1683788268213" duration="48264000" />
+      <workItem from="1683788268213" duration="52410000" />
     </task>
     <servers />
   </component>

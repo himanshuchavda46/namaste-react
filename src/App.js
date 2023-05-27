@@ -8,6 +8,8 @@ import Footer from "./components/Footer"
 import RestaurantMenu from "./components/RestaurantMenu"
 import UserContext from "./utils/UserContext"
 import {createBrowserRouter,RouterProvider, Outlet}  from "react-router-dom"
+import {Provider} from "react-redux";
+import store from "./utils/store"
 
 const About = lazy(()=>import("./components/About"));
 
@@ -17,18 +19,20 @@ const AppLayout = () => {
         email: "himanshuchavda46@gmail.com"
     })
     return (
-        <UserContext.Provider value={{
-            user,
-            setUser
-        }}>
-            <div className="app" >
-                <Header/>
-                {/* fill different / outlet things */}
-                {/* All the children go into the outlet */}
-                <Outlet />
-                <Footer />
-            </div>
-        </UserContext.Provider>
+        <Provider store={store}>
+            <UserContext.Provider value={{
+                user,
+                setUser
+            }}>
+                <div className="app" >
+                    <Header/>
+                    {/* fill different / outlet things */}
+                    {/* All the children go into the outlet */}
+                    <Outlet />
+                    <Footer />
+                </div>
+            </UserContext.Provider>
+        </Provider>
     )
 }
 
