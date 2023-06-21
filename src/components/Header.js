@@ -11,6 +11,7 @@ const Header = () => {
         <div className="header">
             <div className="logContainer">
                 <img className="logo"
+                     data-testid="logo"
                      src={foodvilla}/>
             </div>
             <div className="nav-items">
